@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f4f8;
+    }
+    .header {
+      text-align: center;
+      background-color: #4a90e2;
+      color: white;
+      padding: 50px 20px;
+    }
+    .header img {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      border: 5px solid white;
+    }
+    .header h1 {
+      margin: 10px 0;
+    }
+    .header p {
+      margin: 5px 0;
+    }
+    .header a {
+      color: white;
+      text-decoration: none;
+    }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      background-color: #333;
+      overflow: hidden;
+    }
+    .tabs button {
+      flex: 1;
+      padding: 14px 16px;
+      color: white;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .tabs button:hover {
+      background-color: #555;
+    }
+    .tabs button.active {
+      background-color: #4a90e2;
+    }
+    .tab-content {
+      display: none;
+      padding: 20px;
+      background-color: white;
+    }
+    .tab-content.active {
+      display: block;
+    }
+    .icon {
+      margin-right: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <img src="C:\Users\HP\Pictures\preethu.jfif" alt="Profile Picture">
+  <h1>Prithu HS</h1>
+  <p>Computer Science Student at Malnad College of Engineering</p><br>
+  <p><i class="fas fa-envelope icon"></i><a href="mailto:prithushetty7@gmail.com">prithushetty7@gmail.com</a></p><br>
+  <p><i class="fas fa-map-marker-alt icon"></i>Location:Hassan Karnataka</p><br>
+  <p>
+    <i class="fab fa-github icon"></i>
+    <a href="https://github.com/Prithushetty" target="_blank">GitHub</a>
+  </p>
+</div>
+
+<div class="tabs">
+  <button class="tab-link active" onclick="openTab(event, 'skills')">Skills</button>
+  <button class="tab-link" onclick="openTab(event, 'education')">Education</button>
+  <button class="tab-link" onclick="openTab(event, 'projects')">Projects</button>
+</div>
+
+<div id="skills" class="tab-content active">
+  <h2>Skills</h2>
+  <p>• Programming: Java, C</p>
+  <p>• Web Development: HTML, CSS, JavaScript</p>
+  <p>• Databases: MySQL</p>
+</div>
+
+<div id="education" class="tab-content">
+  <h2>Education</h2>
+  <p><strong>College:</strong></p>
+  <p>Malnad College of Engineering Hassan</p>
+  <p>Bachelor of Engineering in Computer Science</p>
+  <p>Currently Pursuing</p>
+  <p>CGPA: 8.0</p>
+  <br>
+  <p><strong>Diploma:</strong></p>
+  <p>Smt. L V (govt) Polytechnic Hassan</p>
+  <p>Computer Science and Engineering</p>
+<p> 2019-2022</p>
+  <p>CGPA: 8.0</p>
+  <br>
+  <p><strong>School:</strong></p>
+  <p>St Philomena's Girls High School Hassan</p>
+  <p>2019</p>
+  <p>Percentage: 86.24%</p>
+</div>
+
+<div id="projects" class="tab-content">
+  <h2>Projects</h2>
+  <p><strong>Job Website:</strong> Online job search website.</p>
+</div>
+
+<script>
+  function openTab(evt, tabName) {
+    const tabContent = document.querySelectorAll('.tab-content');
+    const tabLinks = document.querySelectorAll('.tab-link');
+
+    tabContent.forEach(tab => tab.classList.remove('active'));
+    tabLinks.forEach(link => link.classList.remove('active'));
+
+    document.getElementById(tabName).classList.add('active');
+    evt.currentTarget.classList.add('active');
+  }
+</script>
+
+</body>
+</html>
